@@ -1,7 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap');
 
+:root {
+    --bdr-color: #596D48;
+}
 
-/* * {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Left Side of the website */
+
+.img_side {
+    position: relative;
+    height: 100vh;
+    width: 40vw;
+    overflow: hidden;
+}
+
+.main_image {
+    height: 100%;
+    width: 100%;
+}
+
+.image_caption {
+    position: absolute;
+    top: 15em;
+    width: 100%;
+    background-color: rgba(1, 1, 10, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.img_title {
+    font-size: 8rem;
     font-family: 'Cinzel', serif;
-    background-color: black;
-} */
+    color: white;
+}
+
+#odin_logo {
+    height: 200px;
+}
+
+.fig_caption {
+    color: white;
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.photo_source {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Right side of the website */
+
+.form_side {
+    background-color: #f9fafb;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.main_descript {
+    margin-top: 18em;
+    margin-left: 3em;
+    max-width: 100ch;
+    
+}
+
+.title {
+    margin-bottom: 1.5em;
+}
+
+.form {
+    background-color: white;
+    padding: 1em 3em 2em;
+    box-shadow: -6px 11px 20px 0px #d7ddd2;
+}
+
+.data_fields {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1.5em;
+}
+
+.labels {
+    margin-bottom: 0.3em;
+}
+
+.input_requested {
+    border-radius: 0.3em;
+    border: 1px solid #E5E7EB;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    width: 20em;
+}
+
+.input_requested:focus-visible {
+    box-shadow: -6px 11px 20px 0px #d7ddd2;
+    border: 1px solid var(--bdr-color);
+    outline: none;
+}
+
+.btn {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 2em 3em;
+    padding: 0.9em;
+    width: 15em;
+    background-color: var(--bdr-color);
+    color: white;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.existing_account {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: 3em;
+    margin-bottom: 3em;
+}
+
+.log_in {
+    color: var(--bdr-color);
+}
+
+.log_in:active {
+    color: var(--bdr-color);
+}

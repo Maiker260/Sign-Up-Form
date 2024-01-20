@@ -4,56 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
-    <section>
-        <figure>
-            <img src="./Assets/halie-west-bTzpau9mKT4-unsplash.jpg" alt="A forest Picture" width="600px">
-            <figcaption>Photo by <span class="underlined">Halie West</span> on <span class="underlined">Unsplash</span> </figcaption>
-        </figure>
-        <div>
-            <img src="./Assets/odin-lined.png" alt="An Odin Logo" width="200px">
-            <h1>TESTI</h1>
-        </div>
-    </section>
-    <main>
-        <h2>This is not a real online service! You knopw you need something like this in your like to help you realize your deepest dreams. Sign Up now to get started.</h2>
-        <h2>You know you want to.</h2>
+    <main class="flex">
+        <aside class="background_image_design ">
+            <figure class="img_side">
+                <img class="main_image" src="./Assets/halie-west-bTzpau9mKT4-unsplash.jpg" alt="A forest Picture"/>
+                <figcaption class="fig_caption">Photo by <a href="https://unsplash.com/@haliewestphoto" class="photo_source" target="_blank">Halie West</a> on <a href="https://unsplash.com/photos/green-and-brown-trees-under-blue-sky-during-daytime-bTzpau9mKT4" class="photo_source" target="_blank">Unsplash</a> </figcaption>
+                <div class="image_caption flex">
+                    <img id="odin_logo" src="./Assets/odin-lined.png" alt="An Odin Logo" />
+                    <h1 class="img_title">TESTI</h1>
+                </div>
+            </figure>
+        </aside>
+        <section class="form_side">
+            <section class="main_descript">
+                <h2 class="title">This is not a real online service! You know you need something like this in your like to help you realize your deepest dreams. <br> Sign Up now to get started.</h2>
+                <h2 class="title">You know you want to.</h2>
+            </section>
+            <section>
+                <form class="form" id="my_form" action="AN_URL_TO_SEND_THE_DATA" method="post">
+                    <h2 class="title">Let's do this!</h2>
+                    <div class="grid">
+                        <div class="data_fields flex">
+                            <label class="labels" for="user_first_name">First Name</label>
+                            <input class="input_requested" type="" name="user_first_name" id="user_first_name" placeholder="Gali"/>
+                        </div>
+                        <div class="data_fields flex">
+                            <label class="labels" for="user_last_name">Last Name</label>
+                            <input class="input_requested" type="text" name="user_last_name" id="user_last_name" placeholder="Mendez"/>
+                        </div>
+                        <div class="data_fields flex">
+                            <label class="labels" for="user_email">Email</label>
+                            <input class="input_requested" type="email" name="user_email" id="user_email" placeholder="user@example.com" />
+                        </div>
+                        <div class="data_fields flex">
+                            <label class="labels" for="user_phone_number">Phone Number</label>
+                            <input class="input_requested" type="tel" name="user_phone_number" id="user_phone_number" placeholder="8888-8888" />
+                        </div>
+                        <div class="data_fields flex">
+                            <label class="labels" for="user_password">Password</label>
+                            <input class="input_requested" type="password" name="user_password" id="user_password" />
+                        </div>
+                        <div class="data_fields flex">
+                            <label class="labels" for="user_confirm_password">Confirm Password</label>
+                            <input class="input_requested" type="password" name="user_confirm_password" id="user_confirm_password" />
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div class="account_section">
+                <input class="btn" type="submit" value="Create Account" form="my_form" />
+                <p class="existing_account">Already have an account? <a href="" class="log_in">Log in</a></p>
+            </div>
+        </section>
     </main>
-    <section>
-        <form action="AN_URL_TO_SEND_THE_DATA" method="post" />
-            <h2>Let's do this!</h2>
-            <div>
-                <label for="user_first_name">First Name</label>
-                <input type="" name="user_first_name" id="user_first_name" />
-            </div>
-            <div>
-                <label for="user_last_name">Last Name</label>
-                <input type="text" name="user_last_name" id="user_last_name" />
-            </div>
-            <div>
-                <label for="user_email">Email</label>
-                <input type="email" name="user_email" id="user_email" />
-            </div>
-            <div>
-                <label for="user_phone_number">Phone Number</label>
-                <input type="tel" name="user_phone_number" id="user_phone_number" />
-            </div>
-            <div>
-                <label for="user_password">Password</label>
-                <input type="password" name="user_password" id="user_password" />
-            </div>
-            <div>
-                <label for="user_confirm_password">Confirm Password</label>
-                <input type="password" name="user_confirm_password" id="user_confirm_password" />
-            </div>
-            <div>
-                <input type="submit" value="Create Account" />
-            </div>
-            <p>Already have an account? <span>Log in</span></p>
-        </form>
-    </section>
 </body>
 </html>
