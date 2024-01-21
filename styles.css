@@ -115,10 +115,21 @@
     outline: none;
 }
 
+.wrong_password {
+    margin-top: 0.5em;
+    font-size: 0.9rem;
+    color: red;
+}
+
+.do_not_match {
+    border: 1px solid red;
+    background-color: rgb(246, 241, 241);
+}
+
 .btn {
     font-family: sans-serif;
     font-weight: bold;
-    margin: 2em 3em;
+    margin: 2em 3.5em;
     padding: 0.9em;
     width: 15em;
     background-color: var(--bdr-color);
@@ -130,7 +141,7 @@
 .existing_account {
     font-size: 0.9rem;
     font-weight: bold;
-    margin-left: 3em;
+    margin-left: 3.5em;
     margin-bottom: 3em;
 }
 
@@ -140,4 +151,21 @@
 
 .log_in:active {
     color: var(--bdr-color);
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 50%;
+    height: 2em;
+    border: 1px solid #ededed;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
 }

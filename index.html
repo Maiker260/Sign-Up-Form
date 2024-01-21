@@ -21,7 +21,7 @@
         </aside>
         <section class="form_side">
             <section class="main_descript">
-                <h2 class="title">This is not a real online service! You know you need something like this in your like to help you realize your deepest dreams. <br> Sign Up now to get started.</h2>
+                <h2 class="title">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br> Sign Up now to get started.</h2>
                 <h2 class="title">You know you want to.</h2>
             </section>
             <section>
@@ -30,36 +30,38 @@
                     <div class="grid">
                         <div class="data_fields flex">
                             <label class="labels" for="user_first_name">First Name</label>
-                            <input class="input_requested" type="" name="user_first_name" id="user_first_name" placeholder="Gali"/>
+                            <input class="input_requested" type="" name="user_first_name" id="user_first_name" placeholder="Gali" required/>
                         </div>
                         <div class="data_fields flex">
                             <label class="labels" for="user_last_name">Last Name</label>
-                            <input class="input_requested" type="text" name="user_last_name" id="user_last_name" placeholder="Mendez"/>
+                            <input class="input_requested" type="text" name="user_last_name" id="user_last_name" placeholder="Mendez" required/>
                         </div>
                         <div class="data_fields flex">
                             <label class="labels" for="user_email">Email</label>
-                            <input class="input_requested" type="email" name="user_email" id="user_email" placeholder="user@example.com" />
+                            <input class="input_requested" type="email" name="user_email" id="user_email" placeholder="user@example.com" required/>
                         </div>
                         <div class="data_fields flex">
                             <label class="labels" for="user_phone_number">Phone Number</label>
-                            <input class="input_requested" type="tel" name="user_phone_number" id="user_phone_number" placeholder="8888-8888" />
+                            <input class="input_requested" type="tel" name="user_phone_number" id="user_phone_number" placeholder="8888-8888" pattern=".{8}" title="Must be an 8 digit Phone Number" required/>
                         </div>
                         <div class="data_fields flex">
                             <label class="labels" for="user_password">Password</label>
-                            <input class="input_requested" type="password" name="user_password" id="user_password" />
+                            <input class="input_requested" type="password" name="user_password" id="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onkeyup="validatePassword()" required/>
+                            <p class="wrong_password" hidden>* Passwords do not match</p>
                         </div>
                         <div class="data_fields flex">
                             <label class="labels" for="user_confirm_password">Confirm Password</label>
-                            <input class="input_requested" type="password" name="user_confirm_password" id="user_confirm_password" />
+                            <input class="input_requested" type="password" name="user_confirm_password" id="user_confirm_password"  onkeyup="validatePassword()" required/>
                         </div>
                     </div>
                 </form>
             </section>
             <div class="account_section">
-                <input class="btn" type="submit" value="Create Account" form="my_form" />
+                <input id="submit_btn" class="btn" type="submit" value="Create Account" form="my_form" />
                 <p class="existing_account">Already have an account? <a href="" class="log_in">Log in</a></p>
             </div>
         </section>
     </main>
+    <footer>Website under Construction</footer>
 </body>
 </html>
